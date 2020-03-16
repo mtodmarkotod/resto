@@ -1,0 +1,381 @@
+ /* *************   FONTS  **************** */
+
+/* ALEO REGULAR */
+@font-face{
+    font-family: 'Aleo-Regular';
+    src: url(./fonts/Aleo-Regular.otf);
+}
+
+@font-face{
+    font-family: 'Aleo-Bold';
+    src: url(./fonts/Aleo-Bold.otf);
+}
+
+@font-face{
+    font-family: 'Aleo-Light-Italic';
+    src: url(./fonts/Aleo-LightItalic.otf);
+}
+
+@font-face{
+    font-family: 'Mano-Negra';
+    src: url(./fonts/WCManoNegraBta.otf);
+}
+
+
+
+/* BASE*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Aleo-Regular';
+    color: #6E6E6E;
+}
+
+
+/* COMPONENTS */
+.container{
+    max-width: 110rem;
+    margin: 0 auto;
+}
+.active-nav{
+    border-top: 1px solid #F34949 !important;
+    border-bottom: 1px solid #F34949 !important;
+    color: #F34949 !important;
+}
+.disable-scroll{
+    overflow: hidden;
+}
+
+
+
+
+/* NAVBAR */
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    /* margin: 4.2rem 0;  */
+    margin: 2rem 0;
+    transition: all .3s;
+}
+.nav-item{
+    font-size: 1.4rem;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.nav-item:not(:last-child){
+    margin-right: 2.3rem;
+}
+.nav-link{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+.nav-item:hover{
+    border-top: 1px solid #F34949;
+    border-bottom: 1px solid #F34949;
+    color: #F34949;
+}
+
+
+/* SLIDER */
+
+.slider {
+    height: 65vh;
+    position: relative;
+  }
+  
+.slide_viewer {
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.slide_group {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.slide::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+}
+.slide:first-child {
+    display: block;
+} 
+.slide-image{
+    height: 100%;
+}
+
+.slide_buttons {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+a.slide_btn {
+    color: white;
+    font-size: 35px;
+    margin: 0 0.175em;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+    color: #F34949;
+    cursor: pointer;
+}
+
+.arrow{
+    width: 5rem;
+    height: 5rem;
+    fill: white;
+}
+.arrow:hover{
+    fill: #F34949;
+}
+.header-main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.header-content{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50%;
+    text-align: center;
+}
+.heading-primary{
+    font-size: 10rem;
+    font-family: 'Mano-Negra';
+}
+
+.heading-secondary{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    line-height: 3rem;
+}
+
+.heading-secondary::before,.heading-secondary::after{
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 1px;
+    margin: 0 2rem;
+    background-color: white;
+}
+
+.previous_btn, .next_btn {
+    cursor: pointer;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+/* MENU SECTION */
+
+.the-menu-box{
+    border-top: 4px solid #F34949;
+    display: flex;
+    justify-content: center;
+}
+
+.the-menu{
+    font-family: 'Aleo-Bold';
+    font-size: 2rem;
+    color: white;
+    background-color: #F34949;
+    padding: 2.5rem;
+    padding-top: 2.1rem;
+    padding-bottom: 3.5rem;
+    margin-top: -1px;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 87%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 50% 87%, 0 100%, 0 0);
+}
+
+.menu-main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7.5rem;
+    margin-bottom: 8.5rem;
+}
+.menu-box{
+    width: 45%;
+}
+.menu-content{
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+.menu-content:not(:last-child){
+    margin-bottom: 6rem;
+}
+.menu-description{
+    display: flex;
+
+}
+
+.menu-details{
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Aleo-Light-Italic';
+    padding-top: .5rem;
+    opacity: .7;
+}
+.menu-line{
+    flex: 1;
+    border-top: 1px solid #6E6E6E;
+    margin: 0 5rem;
+}
+.menu-price::before{
+    content: '\0024';
+}
+.view-all-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30rem;
+}
+.view-all-btn{
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #F34949;
+    padding: 2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.btn-text{
+    padding-right: 1rem;
+
+}
+
+
+/* MODAL */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 100rem;
+    position: relative;
+    margin-bottom: 10rem;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  
+
+
+
+  @media only screen and (max-width: 1131px) {
+    .menu-main {
+      padding: 0 3rem;
+    }
+
+    .menu-line {
+        margin: 0 2rem;
+      }
+  }
+  /* MOBILE LARGE */
+  @media only screen and (max-width: 425px) {
+
+    .nav-list{
+        display: none;
+    }
+    .heading-primary{
+        font-size: 5.2rem;
+    }
+    .menu-main {
+      flex-direction: column;
+    }
+
+    .menu-box{
+        width: 100%;
+    }
+    .menu-box:not(:last-child){
+        margin-bottom: 6rem;
+    }
+    .menu-line {
+        margin: 0 2rem;
+      }
+  }
+
