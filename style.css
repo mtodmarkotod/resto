@@ -271,7 +271,7 @@ a.slide_btn {
     border-top: 1px solid #6E6E6E;
     margin: 0 5rem;
 }
-.menu-price::before{
+.menu-price::before, .meal-price::before{
     content: '\0024';
 }
 .view-all-box{
@@ -301,11 +301,11 @@ a.slide_btn {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding: 100px 0; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height: 80%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -316,12 +316,35 @@ a.slide_btn {
   .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
     border: 1px solid #888;
     width: 50%;
-    height: 100rem;
     position: relative;
     margin-bottom: 10rem;
+  }
+
+  .modal-menu-content{
+      width: 66.66%;
+      margin: 0 auto;
+    padding-bottom: 8rem;
+  }
+  .modal-box{
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.6rem;
+  }
+  .modal-box:not(:last-child){
+      border-bottom: 1px solid rgba(110, 110, 110, 0.302);
+  }
+  .meal-details{
+      font-size: 1.2rem;
+      font-family: 'Aleo-Light-Italic';
+      opacity: .6;
+  }
+  .meal-info{
+      font-size: 2rem;
+      font-family: 'Aleo-bold';
+      color: #555555;
   }
   
   /* The Close Button */
@@ -332,6 +355,11 @@ a.slide_btn {
     right: 1rem;
     font-size: 28px;
     font-weight: bold;
+  }
+
+  .modal-header{
+      padding: 4.4rem 0;
+      text-align: center;
   }
   
   .close:hover,
@@ -348,7 +376,7 @@ a.slide_btn {
 
   @media only screen and (max-width: 1131px) {
     .menu-main {
-      padding: 0 3rem;
+      padding: 0 4rem;
     }
 
     .menu-line {
@@ -367,15 +395,29 @@ a.slide_btn {
     .menu-main {
       flex-direction: column;
     }
-
+    .menu-content{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: unset;
+    }
+    .menu-content:not(:last-child){
+        margin-bottom: 5rem;
+    }
     .menu-box{
         width: 100%;
     }
     .menu-box:not(:last-child){
         margin-bottom: 6rem;
     }
+    .menu-description{
+        margin-bottom: 2rem;
+    }
     .menu-line {
-        margin: 0 2rem;
+        margin: 0;
+        order: 3;
+        flex: none;
+        width: 100%;
       }
+     
   }
 
