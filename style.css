@@ -35,6 +35,9 @@ html{
     font-family: 'Aleo-Regular';
     color: #6E6E6E;
 }
+body{
+    margin-bottom: 30rem;
+}
 
 
 /* COMPONENTS */
@@ -50,7 +53,27 @@ html{
 .disable-scroll{
     overflow: hidden;
 }
-
+.section-heading-box{
+    display: flex;
+    justify-content: space-between;
+}
+.section-heading{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 2.2rem;
+    font-family: 'Aleo-Bold';
+    text-transform: uppercase;
+    color: #555555;
+    margin-bottom: 7.5rem;
+}
+.section-heading::after{
+    content: '';
+    display: block;
+    margin-left: 2rem;
+    width: 45%;
+    border-top: 1px solid #aaaaaa57;
+}
 
 
 
@@ -218,6 +241,10 @@ a.slide_btn {
 }
 /* MENU SECTION */
 
+.section-menu{
+    padding-bottom: 20rem;
+}
+
 .the-menu-box{
     border-top: 4px solid #F34949;
     display: flex;
@@ -263,7 +290,7 @@ a.slide_btn {
     display: block;
     font-size: 1.2rem;
     font-family: 'Aleo-Light-Italic';
-    padding-top: .5rem;
+    padding-top: .3rem;
     opacity: .7;
 }
 .menu-line{
@@ -277,7 +304,6 @@ a.slide_btn {
 .view-all-box{
     display: flex;
     justify-content: center;
-    margin-bottom: 30rem;
 }
 .view-all-btn{
     display: flex;
@@ -291,6 +317,13 @@ a.slide_btn {
 .btn-text{
     padding-right: 1rem;
 
+}
+
+/* SLICK SLIDER */
+
+.slick{
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -308,7 +341,7 @@ a.slide_btn {
     height: 80%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.637); /* Black w/ opacity */
     
   }
   
@@ -340,6 +373,7 @@ a.slide_btn {
       font-size: 1.2rem;
       font-family: 'Aleo-Light-Italic';
       opacity: .6;
+      padding-top: .3rem;
   }
   .meal-info{
       font-size: 2rem;

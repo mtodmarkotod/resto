@@ -14,6 +14,8 @@ $(document).ready(function(){
     $('body').removeClass('disable-scroll');   
   });
 
+
+
 // SLIDER ***********
    $('.slider').each(function() {
     var $this = $(this);
@@ -105,6 +107,18 @@ $(document).ready(function(){
     advance();
   });
 
+  //SLICK SLIDER
+  
+    $('.slick').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed:3000,
+      arrows:false,
+      dots:true,
+      appendDots:$('.section-heading-box')
+    });
 
 
   });
