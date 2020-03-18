@@ -56,6 +56,8 @@ body{
 .section-heading-box{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7.5rem;
 }
 .section-heading{
     display: flex;
@@ -65,7 +67,6 @@ body{
     font-family: 'Aleo-Bold';
     text-transform: uppercase;
     color: #555555;
-    margin-bottom: 7.5rem;
 }
 .section-heading::after{
     content: '';
@@ -111,7 +112,7 @@ body{
 }
 
 
-/* SLIDER */
+/*HEADER SLIDER */
 
 .slider {
     height: 65vh;
@@ -321,7 +322,13 @@ a.slide_btn {
 
 /* SLICK SLIDER */
 
-.slick{
+
+.slick-box{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+.slick-content{
     display: flex;
     justify-content: space-between;
 }
@@ -329,7 +336,6 @@ a.slide_btn {
 
 /* MODAL */
 
-/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
