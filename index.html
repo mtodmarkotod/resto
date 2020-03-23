@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SLICK -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- LIGHTBOX -->
+    <link rel="stylesheet" href="./lightbox/lightbox.min.css">
+    <!-- STYLE -->
     <link rel="stylesheet" href="./style.css">
      <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Resto</title>
 </head>
 <body>
-    <nav class="navbar">
+    <nav id="navbar" class="navbar">
         <div class="container">
             <div class="nav-content">
                 <figure>
@@ -92,7 +96,7 @@
                     <div class="menu-box">
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Voluptate cillum fugiat.
                                     <span class="menu-details">Chesse, tomato, mushrooms, onions.</span>
                                 </p>
@@ -102,7 +106,7 @@
                         </div>
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Metus varius laoreet.
                                     <span class="menu-details">Chicken, mozzarella chesse, onions.</span>
                                 </p>
@@ -112,7 +116,7 @@
                         </div>
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Donec sodales magna.
                                     <span class="menu-details">Tuna, Sweetcorn, Cheese.</span>
                                 </p>
@@ -122,7 +126,7 @@
                         </div>
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Saugue velit cursus.
                                     <span class="menu-details">Pineapple, Minced Beef, Cheese.</span>
                                 </p>
@@ -134,7 +138,7 @@
                     <div class="menu-box">
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Arcu pede enim justo.
                                     <span class="menu-details">Tuna, Sweetcorn, Cheese.</span>
                                 </p>
@@ -144,7 +148,7 @@
                         </div>
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Cras dapibussemper nisi.
                                     <span class="menu-details">Pineapple, Minced Beef, Cheese.</span>
                                 </p>
@@ -154,7 +158,7 @@
                         </div>
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Quam semper libero.
                                     <span class="menu-details">Chesse, tomato, mushrooms, onions.</span>
                                 </p>
@@ -164,7 +168,7 @@
                         </div>
                         <div class="menu-content">
                             <div class="menu-description">
-                                <p class="menu-name">
+                                <p>
                                     Nam eget dui Etiam.
                                     <span class="menu-details">Chicken, mozzarella chesse, onions.</span>
                                 </p>
@@ -184,71 +188,188 @@
         </section>
         <section class="featured-dishes">
             <div class="container">
-                <div class="section-heading-box">
+                <div class="section-heading-box add-dots">
                     <div class="section-heading">
                         Featured Dishes
                     </div>
                 </div>
-                <div class="slick">
+                <div class="featured-dishes-slider">
                     <div>
                        <div class="slick-box">
                            <figure>
-                                <img class="a" src="./images/fuglat.jpg" alt="Fuglat">
+                                <img src="./images/fuglat.jpg" alt="Fuglat">
                            </figure>
-                           <div class="slick-content">
-                               <p class="slick-name">Fugat nula sint</p>
-                               <p class="slick-price">50</p>
+                           <div class="slick-description">
+                               <p class="slick-meal-name">Fugat nula sint</p>
+                               <p class="menu-price">50</p>
+                           </div>
+                           <div class="slick-like">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2"
+                                troke-linecap="round" stroke-linejoin="round"
+                                class="heart">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" class="fill"></path></svg>
+                                <span>0 people like this</span>
                            </div>
                        </div>
                     </div>
                     <div>
                         <div class="slick-box">
                             <figure>
-                                 <img class="a" src="./images/darute.jpg" alt="Fuglat">
+                                 <img src="./images/darute.jpg" alt="Darute">
                             </figure>
-                            <div class="slick-content">
-                                <p class="slick-name">Fugat nula sint</p>
-                                <p class="slick-price">50</p>
+                            <div class="slick-description">
+                                <p class="slick-meal-name">Daute irure dolor</p>
+                                <p class="menu-price">24</p>
+                            </div>
+                            <div class="slick-like">
+                                 <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 troke-linecap="round" stroke-linejoin="round"
+                                 class="heart">
+                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" class="fill"></path></svg>
+                                 <span>0 people like this</span>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="slick-box">
                             <figure>
-                                 <img class="a" src="./images/officia.jpg" alt="Fuglat">
+                                 <img src="./images/officia.jpg" alt="Officia">
                             </figure>
-                            <div class="slick-content">
-                                <p class="slick-name">Fugat nula sint</p>
-                                <p class="slick-price">50</p>
+                            <div class="slick-description">
+                                <p class="slick-meal-name">Officia deserunt mollit</p>
+                                <p class="menu-price">60</p>
+                            </div>
+                            <div class="slick-like">
+                                 <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 troke-linecap="round" stroke-linejoin="round"
+                                 class="heart">
+                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" class="fill"></path></svg>
+                                 <span>0 people like this</span>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="slick-box">
                             <figure>
-                                 <img class="a" src="./images/pim.jpg" alt="Fuglat">
+                                 <img src="./images/pim.jpg" alt="Pim">
                             </figure>
-                            <div class="slick-content">
-                                <p class="slick-name">Fugat nula sint</p>
-                                <p class="slick-price">50</p>
+                            <div class="slick-description">
+                                <p class="slick-meal-name">Pim minim veniam</p>
+                                <p class="menu-price">17</p>
+                            </div>
+                            <div class="slick-like">
+                                 <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 troke-linecap="round" stroke-linejoin="round"
+                                 class="heart">
+                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" class="fill"></path></svg>
+                                 <span>0 people like this</span>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="slick-box">
                             <figure>
-                                 <img class="a" src="./images/donec.jpg" alt="Fuglat">
+                                 <img src="./images/darute.jpg" alt="Darute">
                             </figure>
-                            <div class="slick-content">
-                                <p class="slick-name">Fugat nula sint</p>
-                                <p class="slick-price">50</p>
+                            <div class="slick-description">
+                                <p class="slick-meal-name">Darute veniam</p>
+                                <p class="menu-price">34</p>
+                            </div>
+                            <div class="slick-like">
+                                 <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 troke-linecap="round" stroke-linejoin="round"
+                                 class="heart">
+                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" class="fill"></path></svg>
+                                 <span>0 people like this</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- ABOUT US -->
+        <section class="about-us">
+            <div class="container">
+                <div class="section-heading-box">
+                    <div class="section-heading">
+                        About us
+                    </div>
+                </div>
+                <h3 class="about-heading">Today's restaurant is teater on a grand scale</h3>
+                <div class="about-main">
+                    <div class="about-content left-side">
+                        <p class="line">
+                            Lorem Ipusum simply dummy text of the printing
+                            and typesetting industry.Lorem Ipusum has been the industry's standard
+                            dummy text ever <s>since the 1500s</s>, <span class="aleo-bold">when an unknown printer</span> took a gallery
+                            of type and scrambled it to make a type specimen book.<span class="aleo-bold">It has survived 
+                            not only five centures</span>, but also the leap into electronic typesetting.
+                            Lorem ipusum is made on 25<sup>th</sup> April 1500.
+                        </p> 
+                        <p class="aleo-bold">It was popularised:</p>
+                        <ul class="about-list">
+                            <li class="about-list-item">Lorem Ipusum simply dummy text of the printing</li>
+                            <li class="about-list-item">When an unknown printer took a gallery of type and scram-bled 
+                                it to make a type specimen book.
+                            </li>
+                            <li class="about-list-item">Dummy text ecer since the 1500s</li>
+                        </ul>
+                    </div>
+                
+                    <div class="about-content right-side">
+                        <p>
+                            Lorem Ipusum simply dummy text of the printing
+                            and typesetting industry.<span class="aleo-bold">Lorem Ipusum has been the industry's standard</span>
+                            dummy text ever since the 1500s, when an unknown printer took a gallery
+                            of type and scrambled it to make a type specimen book.<span class="aleo-bold">It has survived 
+                            not only five centures</span>, but also the leap into electronic typesetting.
+                        </p>
+                        <blockquote class="memories">
+                            Memories are like mullgatawny soup in a cheap restaurant.Is is 
+                            best not to stir them.
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- GALLERY -->
+        <section class="section-gallery">
+            <div class="container">
+                <div class="section-heading-box">
+                    <div class="section-heading">
+                        The Gallery
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="col-1-3">
+                        <a class="gallery-link" href="./large-images/g1.large.jpg" data-lightbox="mygallery"><img class="img" src="./images/g1.jpg" alt=""></a>
+                    </div>
+                    <div class="col-1-3">                      
+                        <a class="gallery-link" href="./large-images/g2.large.jpg" data-lightbox="mygallery"><img class="img" src="./images/g2.jpg" alt=""></a>
+                        <a class="gallery-link" href="./large-images/g3.large.jpg" data-lightbox="mygallery"><img class="img" src="./images/g3.jpg" alt=""> </a>                 
+                    </div>
+                    <div class="col-1-3">
+                        <a class="gallery-link" href="./large-images/g4.large.jpg" data-lightbox="mygallery"><img class="img" src="./images/g4.jpg" alt=""></a>
+                        <a class="gallery-link" href="./large-images/g5.large.jpg" data-lightbox="mygallery"><img class="img" src="./images/g5.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#navbar"><img class="go-to-top" src="./images/top_button.png" alt="Go to top"></a>
+        </section>
     </main>
+    <footer class="footer">
+        
+    </footer>
 
 
     <!-- The Modal -->
@@ -420,7 +541,7 @@
                 
                 
 
-
+    <script src="./lightbox/lightbox-plus-jquery.min.js"></script>
     <script type="text/javascript" src="./slick/slick.min.js"></script>
     <script src="./script.js"></script>
 </body>
