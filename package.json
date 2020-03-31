@@ -4,7 +4,8 @@
   "description": "portfolio_project",
   "main": "script.js",
   "scripts": {
-    "devserver": "live-server"
+    "devserver": "live-server",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.css -o css/style.prefix.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mtodmarkotod/resto/issues"
   },
-  "homepage": "https://github.com/mtodmarkotod/resto#readme"
+  "homepage": "https://github.com/mtodmarkotod/resto#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "postcss-cli": "^7.1.0"
+  }
 }

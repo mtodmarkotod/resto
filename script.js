@@ -7,7 +7,6 @@ $(document).ready(function(){
 
    $('.view-all-btn').click(function(){
      $('body').addClass('disable-scroll');  
-     //$('body').css('padding-bottom', '100px'); 
    });
 
    $('.close').click(function(){
@@ -15,7 +14,10 @@ $(document).ready(function(){
   });
 
   $('.nav-menu-btn').click(function(){
-    $('.nav-list').toggleClass('show-nav');   
+    $('.nav-list').toggleClass('show-nav'); 
+    var src = $(this).attr('src');
+    var newsrc = (src=='./images/menu-icon.png') ? './images/close-modal.png' : './images/menu-icon.png';
+    $(this).attr('src', newsrc );  
   });
 
 
@@ -159,8 +161,8 @@ function slide(){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            // centerMode: true,
-            dots:false
+            centerMode: true,
+            appendDots:$('.mobile-dots')
           }
         }
         // You can unslick at a given breakpoint now by adding:
