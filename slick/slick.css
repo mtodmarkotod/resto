@@ -78,8 +78,7 @@
 {
     display: none;
     float: left;
-    height: 100%;
-    
+    outline: none;
 }
 [dir='rtl'] .slick-slide
 {

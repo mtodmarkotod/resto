@@ -14,9 +14,18 @@ $(document).ready(function(){
     $('body').removeClass('disable-scroll');   
   });
 
+  $('.nav-menu-btn').click(function(){
+    $('.nav-list').toggleClass('show-nav');   
+  });
 
 
 // SLIDER ***********
+if(screen.width > 425){
+  slide();
+}
+
+function slide(){
+ 
    $('.slider').each(function() {
     var $this = $(this);
     var $group = $this.find('.slide_group');
@@ -91,6 +100,7 @@ $(document).ready(function(){
         move(3);
       }
     });
+  
     
     $.each($slides, function(index) {
       var $button = $('<a class="slide_btn">&bull;</a>');
@@ -106,18 +116,26 @@ $(document).ready(function(){
     
     advance();
   });
+}
+
+
+
+ 
+
+
 
   //SLICK SLIDER
   
-    $('.slick').slick({
+    $('.featured-dishes-slider').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
+      variableWidth:true,
       speed:3000,
       arrows:false,
       dots:true,
-      appendDots:$('.section-heading-box'),
+      appendDots:$('.add-dots'),
 
       responsive: [
         {
@@ -130,7 +148,7 @@ $(document).ready(function(){
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2
@@ -140,7 +158,9 @@ $(document).ready(function(){
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            // centerMode: true,
+            dots:false
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -150,9 +170,66 @@ $(document).ready(function(){
     });
 
 
+    $('.heart').each(function(){
+      $(this).on('click', function() {
+          var count = parseInt($(this).data('click'), 10) || 0;
+          $(this).css({'fill': '#F34949', 'stroke': '#F34949'});
+          count++;
+          $(this).data('click', count);
+          $(this).next().html('<span>' + count + ' people love this</span>');
+      });
   });
 
 
+
+});
+
+//SMOOTH SCROLL
+
+ // Select all links with hashes
+ $('a[href*="#"]')
+ // Remove links that don't actually link to anything
+ .not('[href="#"]')
+ .not('[href="#0"]')
+ .click(function(event) {
+ // On-page links
+  
+ if (
+     location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+     && 
+     location.hostname == this.hostname
+ ) {
+     // Figure out element to scroll to
+     var target = $(this.hash);
+     
+     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+     // Does a scroll target exist?
+     if (target.length) {
+     // Only prevent default if animation is actually gonna happen
+     event.preventDefault();
+     $('html, body').animate({
+         scrollTop: target.offset().top - 78
+     }, 1000, function() {
+         // Callback after animation
+         // Must change focus!
+        //  var $target = $(target);
+        //  $target.focus();
+        //  if ($target.is(":focus")) { // Checking if the target was focused
+        //  $target.css('outline', '0');
+        //  return false;
+        //  } else {
+        //  $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+        //  $target.focus(); // Set focus again
+        //  };
+     });
+     }
+ }
+ });
+
+ 
+
+
+//MODAL
 
   // Get the modal
 var modal = document.getElementById("myModal");

@@ -1,0 +1,19 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "portfolio_project",
+  "main": "script.js",
+  "scripts": {
+    "devserver": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtodmarkotod/resto.git"
+  },
+  "author": "Marko Todorovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtodmarkotod/resto/issues"
+  },
+  "homepage": "https://github.com/mtodmarkotod/resto#readme"
+}
