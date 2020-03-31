@@ -9,7 +9,7 @@
     <!-- LIGHTBOX -->
     <link rel="stylesheet" href="./lightbox/lightbox.min.css">
     <!-- STYLE -->
-    <link rel="stylesheet" href="./css/style.prefix.css">
+    <link rel="stylesheet" href="./style.css">
      <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Resto</title>
