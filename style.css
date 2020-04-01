@@ -376,7 +376,6 @@ a.slide_btn {
     flex: 0 1 70%;
 }
 .menu-price{
-    flex: 1;
     text-align: right;
 }
 .slick-like{
@@ -813,6 +812,9 @@ a.slide_btn {
     .container{
         max-width: 38.5rem;
     }
+    .section-heading h2{
+        font-size: 1.8rem;
+    }
 
     .section-heading-box{
         padding-top: 5rem;
@@ -955,7 +957,7 @@ a.slide_btn {
     }
 
     /* MODAL */
-    
+
     .modal-content{
         width: 80%;
     }
