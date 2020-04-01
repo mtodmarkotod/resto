@@ -131,9 +131,9 @@ function slide(){
     $('.featured-dishes-slider').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
-      variableWidth:true,
+      //variableWidth:true,
       speed:3000,
       arrows:false,
       dots:true,
@@ -150,7 +150,7 @@ function slide(){
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 769,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2
@@ -161,7 +161,7 @@ function slide(){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            centerMode: true,
+            centerMode: false,
             appendDots:$('.mobile-dots')
           }
         }
@@ -210,7 +210,7 @@ function slide(){
      // Only prevent default if animation is actually gonna happen
      event.preventDefault();
      $('html, body').animate({
-         scrollTop: target.offset().top - 78
+         scrollTop: target.offset().top - 77
      }, 1000, function() {
          // Callback after animation
          // Must change focus!
