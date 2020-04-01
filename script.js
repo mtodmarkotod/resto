@@ -17,13 +17,16 @@ $(document).ready(function(){
     $('.nav-list').toggleClass('show-nav'); 
     var src = $(this).attr('src');
     var newsrc = (src=='./images/menu-icon.png') ? './images/close-modal.png' : './images/menu-icon.png';
-    $(this).attr('src', newsrc );  
+    $(this).attr('src', newsrc ); 
+
   });
 
 
-// SLIDER ***********
+//****** HEADER SLIDER ***********
 if(screen.width > 425){
+
   slide();
+
 }
 
 function slide(){
@@ -131,9 +134,8 @@ function slide(){
     $('.featured-dishes-slider').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
-      //variableWidth:true,
       speed:3000,
       arrows:false,
       dots:true,
