@@ -16,7 +16,7 @@ $(document).ready(function(){
   $('.nav-menu-btn').click(function(){
     $('.nav-list').toggleClass('show-nav'); 
     var src = $(this).attr('src');
-    var newsrc = (src=='./images/menu-icon.png') ? './images/close-modal.png' : './images/menu-icon.png';
+    var newsrc = (src=='./public/images/menu-icon.png') ? './public/images/close-modal.png' : './public/images/menu-icon.png';
     $(this).attr('src', newsrc ); 
 
   });
