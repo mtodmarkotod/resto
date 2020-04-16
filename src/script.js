@@ -124,11 +124,6 @@ function slide(){
 }
 
 
-
- 
-
-
-
   //SLICK SLIDER
   
     $('.featured-dishes-slider').slick({

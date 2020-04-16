@@ -4,8 +4,7 @@
   "description": "portfolio_project",
   "main": "script.js",
   "scripts": {
-    "devserver": "live-server",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" style.css -o style.prefix.css"
+    "devserver": "live-server"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,12 @@
   },
   "homepage": "https://github.com/mtodmarkotod/resto#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.5",
-    "postcss-cli": "^7.1.0"
-  }
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {}
 }

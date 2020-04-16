@@ -83,7 +83,8 @@ html{
     display: block;
     margin-left: 2rem;
     width: 20rem;
-    border-top: 1px solid #aaaaaa57;
+    border-top: 1px solid #b6b3b3;
+    opacity: .3;
 }
 .aleo-bold{
     font-family: 'Aleo-Bold';
@@ -927,6 +928,7 @@ a.slide_btn {
         right: 2rem;
     }
   
+
     /* FOOTER */
 
     .footer-content{
@@ -954,6 +956,9 @@ a.slide_btn {
 
     .gallery{
         flex-direction: column;
+    }
+    .gallery-link{
+        margin-bottom: 1rem;
     }
 
     /* MODAL */
